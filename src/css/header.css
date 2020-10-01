@@ -1,0 +1,86 @@
+.header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    position: sticky;
+    z-index: 100;
+}
+.header__logo{
+    width: 100px;
+    object-fit: contain;
+    margin: 0 25px;
+    margin-top: 18px;
+}
+.header__serarchIcon{
+    padding: 5px;
+    height: 22px !important;
+    background-color: #cd9042;
+}
+.header__search{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+}
+.header__searchInput{
+    height: 12px;
+    padding: 10px;
+    border: none;
+    width: 50%;;
+}
+
+.header__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.header__option{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: azure;
+}
+.header__optionBasket{
+    display: flex;
+    color: white;
+}
+.header__basketCount{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.header__optionOne{
+    font-size: 10px;
+}
+.header__optionTwo{
+    font-size: 13px;
+    font-weight: 800;
+}
+.header__secundary{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    color: thistle;
+    background-color: #232f3e;
+}
+.two{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.header__secundaryOne > div{
+    display: flex;
+    margin-top: -6px;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    font-weight: 100;
+    color: white;
+}
+.header__location{
+    align-content: center;
+    justify-content: center;
+}
