@@ -33,6 +33,10 @@
     border-color: #a88734 #9c7e32 #846a29;
     color:#111
 }
+
+button:hover{
+    cursor: pointer;
+}
 .product__rating{
     display: flex;
 }

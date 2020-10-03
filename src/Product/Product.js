@@ -1,6 +1,26 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import '../css/product.css'
-function Product({title, price, img, rating}) {
+import { useStateValue } from '../StateProvider'
+
+function Product({id,title, price, img, rating}) {
+    const [{basket}, dispatch] = useStateValue ()
+
+   useEffect(()=>{
+        console.log(basket);
+   },[basket])
+
+    const addToBasket=()=> {
+        dispatch({
+            type:'ADD_TO_BASKET',
+            payload:{
+                id:id,
+                title: title,
+                image: img,
+                price: price,
+                rating: rating,
+            }
+        })
+    }
     return (
         <div className='product'>
             <div className='product__info'>
@@ -22,7 +42,8 @@ function Product({title, price, img, rating}) {
             <img
                 src={img} 
             />
-            <button>Add to bascket</button>
+            <button
+                onClick={addToBasket}>Add to bascket</button>
         </div>
     )
 }
