@@ -1,9 +1,11 @@
+
 .header{
     height: 60px;
+    width: 100%;
     display: flex;
     align-items: center;
     background-color: #131921;
-    position: sticky;
+    position: fixed;
     z-index: 100;
 }
 .header__logo{
@@ -36,6 +38,13 @@
     align-items: center;
     justify-content: space-evenly;
 }
+.header__nav > div:hover{
+    color: #cd9042;
+    cursor: pointer;
+}
+.header__optionBasket:hover{
+    color: #cd9042;
+}
 .header__option{
     display: flex;
     flex-direction: column;
@@ -58,27 +67,16 @@
     font-size: 13px;
     font-weight: 800;
 }
-.header__secundary{
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    color: thistle;
-    background-color: #232f3e;
-}
+
 .two{
     display: flex;
     align-content: center;
     justify-content: center;
 }
-.header__secundaryOne > div{
-    display: flex;
-    margin-top: -6px;
-    justify-content: center;
-    flex-direction: column;
-    align-content: center;
-    font-weight: 100;
-    color: white;
+
+.header__secundaryOne{
+    padding-top: 5px;
+    position: fixed;
 }
 .header__location{
     align-content: center;

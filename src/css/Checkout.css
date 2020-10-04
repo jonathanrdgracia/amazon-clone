@@ -4,8 +4,10 @@ img{
 .checkout{
     display: flex;
     padding: 20px;
+    padding-top: 60px;
     background-color: white;
     height: max-content;
+
 }
 .checkout__ad{
     width: 100%;
