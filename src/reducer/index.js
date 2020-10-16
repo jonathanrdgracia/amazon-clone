@@ -12,6 +12,11 @@ const reducer = (state, action)=>{
                 ...state,
                 basket: [action.payload ,...state.basket]
             }
+        case 'REMOVE_FROM_BASKET':
+            return{
+                ...state,
+                basket: {}
+            }
     }
 }
 
