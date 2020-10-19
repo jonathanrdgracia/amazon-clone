@@ -7,10 +7,12 @@ function Home() {
         <div className='home' >
             <div className='home__container'>
                 <img 
+                    id="12321341"                
                     className='home__image' 
                     src='https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg'/>
             <div className='home__row'>
                 <Product
+                    id="12321342"
                     title='El Código del Dinero® contiene todo lo que necesitas saber para conquistar tu libertad financiera'
                     rating={5}
                     price={19.99}
@@ -35,12 +37,14 @@ function Home() {
           
             <div className="home__row">
                 <Product
+                    id="12321343"                
                     price={24.95}
                     rating={2}
                     title= "anteojos de lectura con protección de luz azul de computadora, lentes de videojuego, 0.0 ampliación, anti luz azul,100% protección contra UV, baja distorsión del color, accesorio esencial para juegos., EC0087-BFCL, Rectangle, M, 1"
                     img='https://images-na.ssl-images-amazon.com/images/I/71vlpAUpi6L._AC_SL1500_.jpg'
                 />
                 <Product
+                    id="12321344"
                     price={44.99}
                     rating={4}
                     title="Clean Architecture: A Craftsman's Guide to Software Structure and Design (Robert C. Martin Series) 1st Edition. by Robert Martin (Author) 4.6 out of 5 stars 715 ratings. #1 Best Seller in Computer Quality Control."

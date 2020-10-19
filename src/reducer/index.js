@@ -13,9 +13,20 @@ const reducer = (state, action)=>{
                 basket: [action.payload ,...state.basket]
             }
         case 'REMOVE_FROM_BASKET':
+
+            //* 1) Look through the position index
+            const index = state.basket.findIndex(
+                (basketIndex) => basketIndex.id == action.payload
+            )
+            //* 2) Spread the data
+            let newBasket = [...state.basket]
+            
+            //* 3) Remove index´s position 
+            if(index >= 0) newBasket.splice(index,1)
+
             return{
                 ...state,
-                basket: {}
+                basket: newBasket
             }
     }
 }
