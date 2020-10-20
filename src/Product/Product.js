@@ -1,6 +1,8 @@
 import React,{useEffect} from 'react'
 import '../css/product.css'
 import { useStateValue } from '../StateProvider'
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 function Product({id,title, price, img, rating}) {
     const [{basket}, dispatch] = useStateValue ()
@@ -10,6 +12,15 @@ function Product({id,title, price, img, rating}) {
    },[basket])
 
     const addToBasket=()=> {
+        toast.success('🛒 Product added inside the basket', {
+            position: "bottom-right",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
         dispatch({
             type:'ADD_TO_BASKET',
             payload:{
@@ -42,8 +53,8 @@ function Product({id,title, price, img, rating}) {
             <img
                 src={img} 
             />
-            <button
-                onClick={addToBasket}>Add to bascket</button>
+            <button onClick={addToBasket}>Add to basket</button>
+            <ToastContainer />
         </div>
     )
 }

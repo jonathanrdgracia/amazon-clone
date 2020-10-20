@@ -1,13 +1,19 @@
 import React from 'react'
+import { ToastContainer, toast } from 'react-toastify';
 import '../css/header.css'
 import SearchIcon from '@material-ui/icons/Search';
 import { ShoppingBasket, LocationOn } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
+import { auth } from '../firebase/firebase';
 
 function Header() {
-    const [{basket}] = useStateValue()
+    const [{basket, user}] = useStateValue()
     
+    const handleAuth=()=>{
+        auth.signOut()
+        toast("Wow so easy !");
+    }
     return (
     <div className='container'>
         <div className='header'>
@@ -24,14 +30,16 @@ function Header() {
             </div>
             
             <div className='header__nav'>
-                <div className='header__option'>
-                    <span className='header__optionOne'>
-                        Hello, Guest
-                    </span>
-                    <span className='header__optionTwo'>
-                        Sign in
-                    </span>
-                </div>
+                <Link to={ !user && '/login' }>
+                    <div onClick = { handleAuth} className='header__option'>
+                        <span className='header__optionOne'>
+                            Hello, Guest
+                        </span>
+                        <span className='header__optionTwo'>
+                            { user ? 'Sign out' : 'Sign in' }
+                        </span>
+                    </div>
+                </Link>
                 <div className='header__option'>
                     <span className='header__optionOne'>
                         Returns
